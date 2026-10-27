@@ -1,0 +1,118 @@
+{
+ "forecast_full_test": {
+  "Naive (last 14 days)": {
+   "MAE": 146.44284853354762,
+   "RMSE": 321.5989080172575,
+   "WMAPE": 12.511902274834593,
+   "Bias": 0.40389488270804585
+  },
+  "Moving Average (28-day)": {
+   "MAE": 138.20691040578546,
+   "RMSE": 309.35085735542447,
+   "WMAPE": 11.808233546535186,
+   "Bias": 0.8191297895925329
+  },
+  "Random Forest": {
+   "MAE": 133.68962665555227,
+   "RMSE": 296.5941969679305,
+   "WMAPE": 11.422282211959308,
+   "Bias": -0.8483408421616789
+  },
+  "LightGBM (proposed)": {
+   "MAE": 129.79660589411762,
+   "RMSE": 288.9339164694216,
+   "WMAPE": 11.08966716241106,
+   "Bias": -1.2489816248660217
+  }
+ },
+ "classification": {
+  "Rule-based ROP alert (existing)": {
+   "Accuracy": 74.16633186018481,
+   "Precision": 16.228070175438596,
+   "Recall": 35.85271317829458,
+   "F1": 22.342995169082126,
+   "ROC_AUC": null,
+   "PR_AUC": 0.12467460183982651,
+   "threshold": 0.5
+  },
+  "Logistic Regression": {
+   "Accuracy": 91.10371348217873,
+   "Precision": 56.86327077747989,
+   "Recall": 58.720930232558146,
+   "F1": 57.77717243257968,
+   "ROC_AUC": 0.8886440533078961,
+   "PR_AUC": 0.6110974322864974,
+   "threshold": 0.7576847264034557
+  },
+  "Random Forest": {
+   "Accuracy": 91.87281180049361,
+   "Precision": 61.78247734138973,
+   "Recall": 56.61683277962348,
+   "F1": 59.08696908407974,
+   "ROC_AUC": 0.9022164331526448,
+   "PR_AUC": 0.6347624615696728,
+   "threshold": 0.5321717142250265
+  },
+  "XGBoost": {
+   "Accuracy": 91.1611088790679,
+   "Precision": 57.02959830866807,
+   "Recall": 59.7452934662237,
+   "F1": 58.355868036776634,
+   "ROC_AUC": 0.90033276217933,
+   "PR_AUC": 0.63849237958827,
+   "threshold": 0.6723002791404724
+  },
+  "Proposed (LightGBM + forecast features)": {
+   "Accuracy": 94.13132066808242,
+   "Precision": 72.8892784107508,
+   "Recall": 69.07530454042082,
+   "F1": 70.93105899076049,
+   "ROC_AUC": 0.9434810246323415,
+   "PR_AUC": 0.7895714907909707,
+   "threshold": 0.6597519174736045
+  }
+ },
+ "confusion_matrix": [
+  [
+   30306,
+   928
+  ],
+  [
+   1117,
+   2495
+  ]
+ ],
+ "proposed_threshold": 0.6597519174736045,
+ "feature_list": [
+  "on_hand",
+  "on_order",
+  "days_of_supply",
+  "pos_days_of_supply",
+  "d_mean7",
+  "d_mean28",
+  "d_std28",
+  "d_trend",
+  "lt_mean",
+  "lt_std",
+  "upstream_shortage",
+  "short_days30",
+  "distributor_disruption",
+  "disrupt_days14",
+  "weather_event",
+  "stockout_days30",
+  "rop_gap",
+  "n_manufacturers",
+  "cold_chain",
+  "cat_code",
+  "ftype_code",
+  "woy_sin",
+  "woy_cos",
+  "eta_days",
+  "intransit_14d",
+  "cover_until_eta",
+  "fc14",
+  "fc_dos",
+  "fc_gap",
+  "fc_net14"
+ ]
+}

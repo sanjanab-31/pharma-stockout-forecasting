@@ -1,0 +1,108 @@
+{
+ "descriptive": {
+  "Daily demand (units)": {
+   "mean": 81.26752711761121,
+   "median": 36.0,
+   "std": 122.12434894474853,
+   "min": 0.0,
+   "max": 2630.0,
+   "skewness": 3.510542693794441,
+   "kurtosis": 19.405661995714667,
+   "shapiro_W": 0.6461857405639431,
+   "shapiro_p": 7.527189221659435e-73
+  },
+  "On-hand stock (units)": {
+   "mean": 1044.7847982937233,
+   "median": 439.0,
+   "std": 1565.5561990163012,
+   "min": 0.0,
+   "max": 18607.0,
+   "skewness": 3.12815402316129,
+   "kurtosis": 13.983723136697677,
+   "shapiro_W": 0.6729500277851002,
+   "shapiro_p": 3.069421055674913e-71
+  },
+  "Days of supply": {
+   "mean": 13.544005822053458,
+   "median": 13.15763845470393,
+   "std": 7.57732143264545,
+   "min": 0.0,
+   "max": 83.12492726568865,
+   "skewness": 0.6958969219404133,
+   "kurtosis": 1.6707100008997982,
+   "shapiro_W": 0.9635648465820232,
+   "shapiro_p": 9.74455632857535e-34
+  },
+  "Replenishment lead time (days)": {
+   "mean": 8.60280925412318,
+   "median": 6.879547790169063,
+   "std": 5.8458372454759635,
+   "min": 1.6732086423362826,
+   "max": 75.83758413924247,
+   "skewness": 2.8982490118638653,
+   "kurtosis": 12.359633166142476,
+   "shapiro_W": 0.715890692538102,
+   "shapiro_p": 2.1025648018362728e-68
+  },
+  "Next shipment ETA (days)": {
+   "mean": 5.597934969825262,
+   "median": 4.5,
+   "std": 4.592062519485424,
+   "min": 0.0,
+   "max": 29.9,
+   "skewness": 1.6888476431351132,
+   "kurtosis": 3.9270242928566805,
+   "shapiro_W": 0.8561203975210655,
+   "shapiro_p": 1.576373676211601e-55
+  },
+  "Predicted stockout risk": {
+   "mean": 0.1656855945342526,
+   "median": 0.020496650455198134,
+   "std": 0.279201035259722,
+   "min": 4.390455162428927e-06,
+   "max": 0.9996982903756075,
+   "skewness": 1.9380954194463513,
+   "kurtosis": 2.5745763142464355,
+   "shapiro_W": 0.6393059914492586,
+   "shapiro_p": 3.016801654740495e-73
+  }
+ },
+ "correlation_with_stockout_target": {
+  "On-hand days of supply": {
+   "pearson_r": -0.33332824283650914,
+   "p_value": 0.0
+  },
+  "Inventory-position days of supply": {
+   "pearson_r": -0.13091163569657752,
+   "p_value": 5.2408027548872584e-133
+  },
+  "Reorder-point gap": {
+   "pearson_r": -0.28538645781971284,
+   "p_value": 0.0
+  },
+  "Next shipment ETA (days)": {
+   "pearson_r": -0.09891010831835921,
+   "p_value": 1.7677646768960518e-76
+  },
+  "In-transit quantity (14 days)": {
+   "pearson_r": 0.04232870523101654,
+   "p_value": 2.683773019204151e-15
+  },
+  "Mean lead time (90 days)": {
+   "pearson_r": 0.20488561902636937,
+   "p_value": 0.0
+  },
+  "Shortage days (30 days)": {
+   "pearson_r": 0.40547011967930013,
+   "p_value": 0.0
+  },
+  "Past stockout days (30 days)": {
+   "pearson_r": 0.1700397737024181,
+   "p_value": 2.553502229737337e-224
+  },
+  "Demand std. dev. (28 days)": {
+   "pearson_r": 0.0015093819840699858,
+   "p_value": 0.7781370177422127
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "raw_rows": 822961,
+ "duplicates_removed": 2461,
+ "clean_rows": 820500,
+ "missing_before": {
+  "on_hand": 17282,
+  "demand": 9875,
+  "on_order": 7408,
+  "supplier_id": 3289,
+  "category": 4943
+ },
+ "missing_after": {
+  "on_hand": 0,
+  "demand": 0,
+  "on_order": 0,
+  "supplier_id": 0,
+  "category": 0
+ }
+}

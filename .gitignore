@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+# generated data and models (recreate with: python run_pipeline.py)
+data/*.pkl
+outputs/*.pkl
+outputs/*.txt
+.DS_Store
+.ipynb_checkpoints/

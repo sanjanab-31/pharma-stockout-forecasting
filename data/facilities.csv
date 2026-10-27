@@ -1,0 +1,31 @@
+facility_id,city,facility_type,size
+F001,Coimbatore,Tertiary Hospital,2.441081322729248
+F002,Chennai,District Hospital,1.3657719262611492
+F003,Madurai,Retail Pharmacy Chain,1.143439167964553
+F004,Tiruchirappalli,Primary Health Centre,0.6473683269742473
+F005,Salem,Tertiary Hospital,1.8428760661411319
+F006,Tirunelveli,District Hospital,1.6663485169165833
+F007,Erode,Retail Pharmacy Chain,1.104455880796141
+F008,Vellore,Primary Health Centre,0.6686554332664689
+F009,Thoothukudi,Tertiary Hospital,1.8727399967544807
+F010,Thanjavur,District Hospital,1.3722161252215175
+F011,Dindigul,Retail Pharmacy Chain,0.9483192096930325
+F012,Tiruppur,Primary Health Centre,0.7024235973236644
+F013,Karur,Tertiary Hospital,2.326601305670985
+F014,Namakkal,District Hospital,1.5807465034316648
+F015,Hosur,Retail Pharmacy Chain,0.9773656795309325
+F016,Coimbatore,Primary Health Centre,0.5345372932283464
+F017,Chennai,Tertiary Hospital,2.248034612573935
+F018,Madurai,District Hospital,1.155737663418338
+F019,Tiruchirappalli,Retail Pharmacy Chain,1.1310524687970327
+F020,Salem,Primary Health Centre,0.6315994557892954
+F021,Tirunelveli,Tertiary Hospital,2.427117211275129
+F022,Erode,District Hospital,1.3185345421527261
+F023,Vellore,Retail Pharmacy Chain,1.1882792097579613
+F024,Thoothukudi,Primary Health Centre,0.6943490691173274
+F025,Thanjavur,Tertiary Hospital,2.444977477424911
+F026,Dindigul,District Hospital,1.2289976763971018
+F027,Tiruppur,Retail Pharmacy Chain,0.9866884014908137
+F028,Karur,Primary Health Centre,0.49051290378893486
+F029,Namakkal,Tertiary Hospital,1.8957747530194422
+F030,Hosur,District Hospital,1.5025074138157744

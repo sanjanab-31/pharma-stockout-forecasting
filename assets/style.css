@@ -1,0 +1,968 @@
+/* ==========================================================================
+   PharmaTrack Portal - Modern Blue Healthcare SaaS & Intelligence Design System
+   Font: Poppins (Whole Page)
+   Style: Clean Light Portal with Rounded Corners, Pill Controls & Blue Theme
+   Icons: Lucide React Icons (SVG Embedded)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Brand Blue Palette */
+  --primary-blue: #2563eb;
+  --primary-blue-hover: #1d4ed8;
+  --primary-blue-dark: #1e40af;
+  --primary-blue-light: #eff6ff;
+  --primary-blue-border: #bfdbfe;
+  --accent-cyan: #0284c7;
+
+  /* Surfaces & Backgrounds */
+  --bg-page: #f4f6fa;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f8fafc;
+  --bg-card: #ffffff;
+
+  /* Borders */
+  --border-card: #e2e8f0;
+  --border-subtle: #f1f5f9;
+  --border-focus: #2563eb;
+
+  /* Typography */
+  --font-family-base: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --text-main: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+
+  /* Semantic Alerts */
+  --color-critical: #ef4444;
+  --color-critical-bg: #fef2f2;
+  --color-critical-border: #fecaca;
+
+  --color-warning: #f59e0b;
+  --color-warning-bg: #fffbeb;
+  --color-warning-border: #fde68a;
+
+  --color-success: #10b981;
+  --color-success-bg: #ecfdf5;
+  --color-success-border: #a7f3d0;
+
+  --color-purple: #8b5cf6;
+  --color-purple-bg: #f5f3ff;
+  --color-purple-border: #ddd6fe;
+
+  /* Radii & Shadows */
+  --radius-pill: 9999px;
+  --radius-card: 18px;
+  --radius-card-sm: 14px;
+  --radius-btn: 10px;
+
+  --shadow-portal: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  --shadow-hover: 0 10px 25px -4px rgba(37, 99, 235, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.03);
+  --shadow-navbar: 0 2px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* Global Poppins Enforcement */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* App Container */
+.portal-app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-page);
+}
+
+/* Lucide React SVG Icons via CSS (100% Reliable & Crisp) */
+.lucide-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.lucide-truck-white {
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2'%3E%3C/path%3E%3Cpath d='M15 18H9'%3E%3C/path%3E%3Cpath d='M19 18h2a1 1 0 0 0 1-1v-5l-3-4h-5v10'%3E%3C/path%3E%3Ccircle cx='7' cy='18' r='2'%3E%3C/circle%3E%3Ccircle cx='17' cy='18' r='2'%3E%3C/circle%3E%3C/svg%3E");
+}
+
+.lucide-network-blue {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='16' y='16' width='6' height='6' rx='1'%3E%3C/rect%3E%3Crect x='2' y='16' width='6' height='6' rx='1'%3E%3C/rect%3E%3Crect x='9' y='2' width='6' height='6' rx='1'%3E%3C/rect%3E%3Cpath d='M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3'%3E%3C/path%3E%3Cpath d='M12 12V8'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.lucide-alert-red {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ef4444' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'%3E%3C/path%3E%3Cline x1='12' y1='9' x2='12' y2='13'%3E%3C/line%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'%3E%3C/line%3E%3C/svg%3E");
+}
+
+.lucide-package-amber {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m7.5 4.27 9 5.15'%3E%3C/path%3E%3Cpath d='M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z'%3E%3C/path%3E%3Cpath d='m3.3 7 8.7 5 8.7-5'%3E%3C/path%3E%3Cpath d='M12 22V12'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.lucide-shield-green {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'%3E%3C/path%3E%3Cpath d='m9 12 2 2 4-4'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.lucide-trending-purple {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238b5cf6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='22 17 13.5 8.5 8.5 13.5 2 7'%3E%3C/polyline%3E%3Cpolyline points='16 17 22 17 22 11'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.lucide-dashboard-icon {
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='7' height='9' x='3' y='3' rx='1'%3E%3C/rect%3E%3Crect width='7' height='5' x='14' y='3' rx='1'%3E%3C/rect%3E%3Crect width='7' height='9' x='14' y='12' rx='1'%3E%3C/rect%3E%3Crect width='7' height='5' x='3' y='16' rx='1'%3E%3C/rect%3E%3C/svg%3E");
+}
+
+.portal-nav-tab.active .lucide-dashboard-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='7' height='9' x='3' y='3' rx='1'%3E%3C/rect%3E%3Crect width='7' height='5' x='14' y='3' rx='1'%3E%3C/rect%3E%3Crect width='7' height='9' x='14' y='12' rx='1'%3E%3C/rect%3E%3Crect width='7' height='5' x='3' y='16' rx='1'%3E%3C/rect%3E%3C/svg%3E");
+}
+
+.lucide-bell-icon {
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'%3E%3C/path%3E%3Cpath d='M10.3 21a1.94 1.94 0 0 0 3.4 0'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.portal-nav-tab.active .lucide-bell-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'%3E%3C/path%3E%3Cpath d='M10.3 21a1.94 1.94 0 0 0 3.4 0'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.lucide-rotate-icon {
+  width: 14px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8'%3E%3C/path%3E%3Cpath d='M3 3v5h5'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.lucide-building-icon {
+  width: 15px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z'%3E%3C/path%3E%3Cpath d='M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2'%3E%3C/path%3E%3Cpath d='M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2'%3E%3C/path%3E%3Cpath d='M10 6h4'%3E%3C/path%3E%3Cpath d='M10 10h4'%3E%3C/path%3E%3Cpath d='M10 14h4'%3E%3C/path%3E%3Cpath d='M10 18h4'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.lucide-sliders-blue {
+  width: 14px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='4' y1='21' x2='4' y2='14'%3E%3C/line%3E%3Cline x1='4' y1='10' x2='4' y2='3'%3E%3C/line%3E%3Cline x1='12' y1='21' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='8' x2='12' y2='3'%3E%3C/line%3E%3Cline x1='20' y1='21' x2='20' y2='16'%3E%3C/line%3E%3Cline x1='20' y1='12' x2='20' y2='3'%3E%3C/line%3E%3Cline x1='1' y1='14' x2='7' y1='14'%3E%3C/line%3E%3Cline x1='9' y1='8' x2='15' y2='8'%3E%3C/line%3E%3Cline x1='17' y1='16' x2='23' y2='16'%3E%3C/line%3E%3C/svg%3E");
+}
+
+.lucide-check-circle-blue {
+  width: 15px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 11.08V12a10 10 0 1 1-5.93-9.14'%3E%3C/path%3E%3Cpolyline points='22 4 12 14.01 9 11.01'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+/* Top Navigation Bar */
+.portal-navbar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-card);
+  padding: 14px 36px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-navbar);
+}
+
+.portal-brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.portal-logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.portal-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-brand-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.3px;
+}
+
+.portal-brand-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: var(--radius-pill);
+  border: 1px solid #bfdbfe;
+  text-transform: uppercase;
+}
+
+.portal-brand-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Page Navigation Tabs (Portal Style) */
+.portal-nav-switcher {
+  display: flex;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: var(--radius-pill);
+  border: 1px solid #e2e8f0;
+  gap: 4px;
+}
+
+.portal-nav-tab {
+  padding: 8px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.portal-nav-tab:hover {
+  color: var(--primary-blue);
+}
+
+.portal-nav-tab.active {
+  background: #ffffff;
+  color: var(--primary-blue);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Live Status Group */
+.portal-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.meta-pill-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-body);
+}
+
+.status-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+  animation: pulse-dot-portal 2s infinite;
+}
+
+@keyframes pulse-dot-portal {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 5px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Main Content Wrapper */
+.portal-main {
+  flex: 1;
+  padding: 24px 36px 40px 36px;
+  max-width: 1680px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Key Metrics Section with Rounded Corners */
+.metrics-grid-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.metric-card-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-card);
+  padding: 22px 20px;
+  box-shadow: var(--shadow-portal);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card-box:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-hover);
+}
+
+.metric-card-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--card-accent, var(--primary-blue));
+}
+
+.metric-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.metric-card-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.metric-card-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-icon-bg, #eff6ff);
+}
+
+.metric-card-number {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.metric-card-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.metric-trend-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+/* ==========================================================================
+   Page 2: Live Alert Feed (Portal Table & Pill Controls)
+   ========================================================================== */
+
+.page-title-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.page-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.page-subheading {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Pill Search and Filters Toolbar (Matching User Uploaded UI Reference) */
+.portal-filter-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 18px 24px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-portal);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Pill Search Box (Exact Match to User Reference with single inline SVG background) */
+.pill-search-wrapper {
+  position: relative;
+  flex: 2;
+  min-width: 260px;
+}
+
+div.dash-input-wrapper,
+div.pill-search-input,
+.pill-search-wrapper .dash-input-wrapper {
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+input.dash-input-element,
+input.pill-search-input,
+.pill-search-input input,
+#filter-search {
+  width: 100%;
+  padding: 10px 18px 10px 44px !important;
+  border-radius: var(--radius-pill) !important;
+  border: 1px solid #e2e8f0 !important;
+  background-color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: 16px center !important;
+  color: #0f172a !important;
+  font-size: 13px !important;
+  height: 42px !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s ease !important;
+}
+
+input.dash-input-element:focus,
+input.pill-search-input:focus,
+#filter-search:focus {
+  border-color: var(--primary-blue) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+}
+
+input.dash-input-element::placeholder,
+input.pill-search-input::placeholder,
+#filter-search::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Filter Dropdowns (Pill Style like user reference) */
+.pill-dropdown-item {
+  flex: 1;
+  min-width: 170px;
+}
+
+/* Overriding Dash React-Select to be beautiful rounded pills */
+.pill-dropdown-item .Select-control {
+  border-radius: var(--radius-pill) !important;
+  border: 1px solid #e2e8f0 !important;
+  background-color: #ffffff !important;
+  min-height: 42px !important;
+  height: 42px !important;
+  padding: 0 8px !important;
+  box-shadow: none !important;
+}
+
+.pill-dropdown-item .Select-control:hover {
+  border-color: #84cc16 !important;
+}
+
+.pill-dropdown-item .Select-placeholder,
+.pill-dropdown-item .Select--single > .Select-control .Select-value {
+  padding-left: 12px !important;
+  line-height: 40px !important;
+  font-size: 13px !important;
+  color: #1e293b !important;
+  font-weight: 600 !important;
+}
+
+.pill-dropdown-item .Select-menu-outer {
+  border-radius: 14px !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+  margin-top: 6px !important;
+  background-color: #ffffff !important;
+  z-index: 9999 !important;
+}
+
+.pill-dropdown-item .Select-option {
+  padding: 10px 16px !important;
+  font-size: 13px !important;
+  color: #334155 !important;
+}
+
+.pill-dropdown-item .Select-option:hover,
+.pill-dropdown-item .Select-option.is-focused {
+  background-color: #eff6ff !important;
+  color: var(--primary-blue) !important;
+}
+
+/* Reset Button */
+.btn-pill-reset {
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-pill-reset:hover {
+  background: #f8fafc;
+  color: var(--text-main);
+  border-color: #cbd5e1;
+}
+
+/* Split Layout for Alert Feed: Table on Left, Inspector on Right */
+.portal-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 390px;
+  gap: 22px;
+  align-items: start;
+}
+
+/* Portal Table Card (Exact Match to User Reference) */
+.portal-table-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-portal);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.portal-table-top {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f5f9;
+  background: #ffffff;
+}
+
+.portal-table-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.portal-badge-count {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: #eff6ff;
+  color: var(--primary-blue);
+  border: 1px solid #bfdbfe;
+}
+
+/* Dash DataTable Portal Styling */
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th {
+  background-color: #f8fafc !important;
+  color: #475569 !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  padding: 14px 12px !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner td {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  font-size: 12.5px !important;
+  padding: 12px 12px !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  transition: background-color 0.15s ease;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner tr:hover td {
+  background-color: #f8fafc !important;
+  cursor: pointer;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner tr.selected td {
+  background-color: #eff6ff !important;
+}
+
+/* Pagination in Portal DataTable */
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner .previous-next-container {
+  padding: 14px 20px !important;
+  background-color: #ffffff !important;
+  color: #64748b !important;
+  border-top: 1px solid #f1f5f9 !important;
+}
+
+.dash-table-container button.previous-page, 
+.dash-table-container button.next-page,
+.dash-table-container button.first-page,
+.dash-table-container button.last-page {
+  background-color: #ffffff !important;
+  color: #334155 !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: var(--radius-pill) !important;
+  padding: 6px 14px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.dash-table-container button.previous-page:hover,
+.dash-table-container button.next-page:hover {
+  background-color: #eff6ff !important;
+  color: var(--primary-blue) !important;
+  border-color: #bfdbfe !important;
+}
+
+/* Medicine Supply Chain Diagnostic Card (Right Column) */
+.portal-inspector-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-portal);
+  padding: 22px;
+  position: sticky;
+  top: 90px;
+}
+
+.inspector-top-info {
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.inspector-drug-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.inspector-facility-info {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Risk Meter Card in Inspector */
+.portal-risk-gauge-box {
+  background: #f8fafc;
+  border-radius: var(--radius-card-sm);
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.portal-risk-gauge-val {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.portal-risk-gauge-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.portal-risk-gauge-track {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: var(--radius-pill);
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.portal-risk-gauge-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  transition: width 0.4s ease;
+}
+
+/* Diagnostic Metrics List */
+.portal-metric-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.portal-metric-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #f1f5f9;
+}
+
+.portal-metric-row-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.portal-metric-row-val {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Recommended Action Box */
+.portal-action-box {
+  border-radius: var(--radius-card-sm);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.portal-action-badge-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.portal-action-heading {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.portal-action-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #334155;
+}
+
+/* ==========================================================================
+   Page 1: Executive Dashboard & Analytics
+   ========================================================================== */
+
+.portal-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+.portal-chart-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  box-shadow: var(--shadow-portal);
+}
+
+.portal-chart-card.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Policy Simulation Benchmark Banner */
+.portal-policy-banner {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-portal);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.policy-badge-portal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid #bfdbfe;
+  width: fit-content;
+  margin-bottom: 8px;
+}
+
+.policy-title-portal {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.policy-desc-portal {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.policy-stats-quad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.policy-stat-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-card-sm);
+  padding: 14px;
+  text-align: center;
+}
+
+.policy-stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.policy-stat-num {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.policy-stat-sub {
+  font-size: 11px;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+/* Leaderboard Table */
+.portal-benchmark-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.portal-benchmark-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+  text-align: left;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.portal-benchmark-table td {
+  padding: 13px 18px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+}
+
+.portal-benchmark-table tr.highlighted-row td {
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.portal-benchmark-table tr.highlighted-row td:first-child {
+  border-left: 4px solid var(--primary-blue);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .metrics-grid-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .portal-split-layout {
+    grid-template-columns: 1fr;
+  }
+  .portal-inspector-card {
+    position: static;
+  }
+}
+
+@media (max-width: 900px) {
+  .metrics-grid-row {
+    grid-template-columns: 1fr;
+  }
+  .portal-charts-grid {
+    grid-template-columns: 1fr;
+  }
+  .portal-policy-banner {
+    grid-template-columns: 1fr;
+  }
+  .portal-main {
+    padding: 16px;
+  }
+  .portal-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 18px;
+  }
+}

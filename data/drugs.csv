@@ -1,0 +1,51 @@
+drug_id,drug_name,category,base,season,cold_chain,supplier_id,n_manufacturers
+D001,Amoxicillin 500mg,Antibiotic,120,winter,0,S03,1
+D002,Azithromycin 500mg,Antibiotic,60,winter,0,S02,4
+D003,Ceftriaxone 1g Inj,Antibiotic,35,monsoon,0,S05,3
+D004,Ciprofloxacin 500mg,Antibiotic,45,monsoon,0,S06,3
+D005,Doxycycline 100mg,Antibiotic,30,monsoon,0,S08,3
+D006,Meropenem 1g Inj,Antibiotic,8,flat,0,S04,3
+D007,Piperacillin-Tazobactam,Antibiotic,10,flat,0,S02,1
+D008,Paracetamol 650mg,Analgesic,300,monsoon,0,S07,3
+D009,Ibuprofen 400mg,Analgesic,110,flat,0,S06,4
+D010,Diclofenac 50mg,Analgesic,80,flat,0,S06,1
+D011,Tramadol 50mg,Analgesic,25,flat,0,S01,3
+D012,Morphine 10mg Inj,Analgesic,5,flat,0,S03,1
+D013,Metformin 500mg,Antidiabetic,220,trend,0,S07,2
+D014,Glimepiride 2mg,Antidiabetic,90,trend,0,S07,2
+D015,Insulin Glargine,Antidiabetic,20,trend,1,S04,5
+D016,Insulin Regular,Antidiabetic,25,trend,1,S07,1
+D017,Sitagliptin 100mg,Antidiabetic,40,trend,0,S07,1
+D018,Amlodipine 5mg,Cardiovascular,180,trend,0,S04,2
+D019,Atorvastatin 20mg,Cardiovascular,150,trend,0,S08,5
+D020,Telmisartan 40mg,Cardiovascular,130,trend,0,S03,5
+D021,Metoprolol 50mg,Cardiovascular,70,flat,0,S02,1
+D022,Clopidogrel 75mg,Cardiovascular,60,flat,0,S06,1
+D023,Enoxaparin 40mg Inj,Cardiovascular,12,flat,1,S06,4
+D024,Heparin 5000IU Inj,Cardiovascular,15,flat,0,S02,1
+D025,Salbutamol Inhaler,Respiratory,40,winter,0,S07,5
+D026,Budesonide Inhaler,Respiratory,22,winter,0,S02,1
+D027,Montelukast 10mg,Respiratory,55,winter,0,S07,5
+D028,Levocetirizine 5mg,Respiratory,95,winter,0,S01,1
+D029,Prednisolone 10mg,Respiratory,35,winter,0,S07,2
+D030,Oseltamivir 75mg,Antiviral,6,winter,0,S07,3
+D031,Acyclovir 400mg,Antiviral,12,flat,0,S07,1
+D032,Tenofovir 300mg,Antiviral,18,flat,0,S06,3
+D033,ORS Sachet,Gastrointestinal,160,summer,0,S04,3
+D034,Pantoprazole 40mg,Gastrointestinal,170,flat,0,S06,4
+D035,Ondansetron 4mg,Gastrointestinal,50,monsoon,0,S03,5
+D036,Metronidazole 400mg,Gastrointestinal,65,monsoon,0,S07,3
+D037,Loperamide 2mg,Gastrointestinal,30,summer,0,S05,2
+D038,Zinc Sulphate 20mg,Gastrointestinal,45,summer,0,S04,2
+D039,Cisplatin 50mg Inj,Oncology,2,flat,0,S05,2
+D040,Methotrexate 2.5mg,Oncology,4,flat,0,S05,4
+D041,Tamoxifen 20mg,Oncology,5,flat,0,S01,1
+D042,Carboplatin 450mg Inj,Oncology,2,flat,0,S02,1
+D043,Rabies Vaccine,Vaccine,8,flat,1,S02,2
+D044,Tetanus Toxoid,Vaccine,14,flat,1,S01,1
+D045,Hepatitis B Vaccine,Vaccine,6,flat,1,S04,1
+D046,Anti-Snake Venom,Emergency,3,monsoon,1,S06,1
+D047,Adrenaline 1mg Inj,Emergency,4,flat,0,S06,4
+D048,Atropine 0.6mg Inj,Emergency,4,flat,0,S04,4
+D049,Normal Saline 500ml,Emergency,70,summer,0,S07,4
+D050,Dexamethasone 4mg Inj,Emergency,18,flat,0,S05,2

@@ -1,0 +1,18 @@
+{
+ "base": {
+  "stockout_pct": 3.3381215469613257,
+  "stockout_days": 9063,
+  "fill_rate": 96.82441565448974,
+  "median_inventory_days": 13.033016039769013,
+  "orders": 16830
+ },
+ "prop": {
+  "stockout_pct": 1.2162062615101288,
+  "stockout_days": 3302,
+  "fill_rate": 98.95071549464993,
+  "median_inventory_days": 12.399663627708337,
+  "orders": 21285,
+  "alternate_source_orders": 706
+ },
+ "stockout_day_reduction_pct": 63.56614807458899
+}
